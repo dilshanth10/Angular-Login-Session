@@ -1,0 +1,279 @@
+<aside class="main-sidebar sidebar-light-primary elevation-4 ">
+
+  <a href="index3.html" class="brand-link bg-gray-light">
+    <img src="../../../assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      style="opacity: .8">
+    <span class="brand-text font-weight-light">HRM</span>
+  </a>
+
+
+  <div class="sidebar">
+
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="../../../assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+      </div>
+      <div class="info">
+        <a href="#" class="d-block">Natsu Dragneel</a>
+      </div>
+    </div>
+
+
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+        <li class="nav-item has-treeview menu-open">
+          <a href="#" class="nav-link active">
+            <i class="nav-icon fa fa-dashboard"></i>
+            <p>
+              Employee
+              <i class="right fa fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <li class="nav-item has-treeview menu-close">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>
+                    Employee Management
+                    <i class="right fa fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="profile" routerLinkActive="active">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Profile</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="appointment/appointmentDetails" routerLinkActive="active">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Appointment</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="/par" class="nav-link">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>PAR</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/careerdevelopmentplan" routerLinkActive="active">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Career Development Plan</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/remuneration" routerLinkActive="active">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Remuniration</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="promotion" class="nav-link">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Promotion</p>
+                    </a>
+                  </li>
+
+
+
+                  <!-- <li class="nav-item">
+                    <a class="nav-link" routerLink="/employee/employeemanagement/experience-letter" routerLinkActive="active">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Experience Letter</p>
+                    </a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a routerLink="/emptermination" class="nav-link">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Termination</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                      <a routerLink="/directory/view-directory" class="nav-link">
+                        <i class="fa fa-circle nav-icon"></i>
+                        <p>Directory</p>
+                      </a>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+            <li class="nav-item">
+              <a routerLink="leaveManagement" class="nav-link">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>Leave Management</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/recruitment" class="nav-link">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>Recruitment</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="welfare" class="nav-link">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>Welfare & Motivation</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/selfservice/addIndividualComplaint" routerLinkActive="active" class="nav-link">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>Self Service</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item has-treeview menu-close">
+          <a href="#" class="nav-link ">
+            <i class="nav-icon fa fa-dashboard"></i>
+            <p>
+              Trainee
+              <i class="right fa fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <li class="nav-item has-treeview menu-close">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>
+                    Trainee Management
+                    <i class="right fa fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a routerLink='/profile' class="nav-link">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Profile</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Selection</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="/par" class="nav-link" routerLinkActive="active">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>PAR</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="/skilldevelopmentplan" class="nav-link" routerLinkActive="active">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Skill Development Plan</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="/courserecord" class="nav-link" routerLinkActive="active">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Course Record</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="/attendance" class="nav-link" routerLinkActive="active">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Attendance</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="/finalassesment" class="nav-link" routerLinkActive="active">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Final Assessment</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a routerLink="/termination" class="nav-link" routerLinkActive="active">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Termination</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>Notification</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/projects" class="nav-link" routerLinkActive="active">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>Projects</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/assignments" class="nav-link" routerLinkActive="active">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>Assignments</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/intake" class="nav-link" routerLinkActive="active">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>Intake</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/posting" class="nav-link" routerLinkActive="active">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>Posting</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/selfservice" routerLinkActive="active">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>Self Service</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!--Trainer Navigations-->
+        <li class="nav-item has-treeview menu-close">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fa fa-user"></i>
+            <p>
+              Trainer
+              <i class="right fa fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <li class="nav-item has-treeview menu-close">
+                <a href="#" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>
+                    Trainer Management
+                    <i class="right fa fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a routerLink="trainermanagement/training-history" class="nav-link" routerLinkActive="active">
+                      <i class="fa fa-circle nav-icon"></i>
+                      <p>Training History</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <li class="nav-item">
+              <a routerLink="/trainerselfservice" class="nav-link" routerLinkActive="active">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>Self Service</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </nav>
+  </div>
+</aside>

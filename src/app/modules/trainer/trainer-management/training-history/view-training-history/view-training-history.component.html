@@ -1,0 +1,140 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+
+      <!-- card header start -->
+      <div class="card-header">
+        <h5 class="card-title">View Training History</h5>
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
+         
+        </div>
+      </div>
+      <!-- card header end -->
+
+      <!-- card body start -->
+      <div class="card-body">
+       
+        
+        <table id="myTable" class="table order-list table-striped">
+   
+          <tr>
+            <td>Trainer Id</td>
+            <td>Trainer Name</td>
+            <td>date</td>
+            <td>Training Topic</td>
+            <td>Total hours covered</td>
+            <td></td>
+            
+          </tr>
+        
+          <tr *ngFor="let obj of training">
+
+            <td>{{obj.trainingId}}</td>
+            <td>{{obj.trainerName}}</td>
+            <td>{{obj.date}}</td>
+            <td>{{obj.trainingTopic}}</td>
+            <td>{{obj.totalHoursCovered}}</td>
+            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#editfinalassesment" (click)="bindTrainingHistory(obj)">Edit</button></td>
+            <!-- <td><button type="button" class="btn btn-danger" data-toggle="modal" data-dismiss="modal" data-target="#exampleModal" (click)="confirmDelete(obj)">Delete</button></td> -->
+           
+          </tr>
+          
+        
+    
+      </table>
+      
+      <!-- card body end -->
+    </div>
+  </div>
+</div>
+
+<!-- <app-view-final-assesment-score-model></app-view-final-assesment-score-model> -->
+
+
+<!-- edit modal start -->
+<div id="editfinalassesment" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="card-title">Edit Final Assesment</h3>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="col-md-12">
+          
+            <div class="card-body">
+              <div class="row">
+                
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="traneeId">Trainer ID</label>
+                    <input type="text" class="form-control" id="traneeId" name="traneeId" [(ngModel)]="editTraining.trainingId" readonly>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="traineename">Trainer name</label>
+                    <input type="text" class="form-control" id="traineename" name="traineename" [(ngModel)]="editTraining.trainerName">
+                  </div>
+                </div>
+              
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="start-date"> Date</label>
+                    <input type="date" class="form-control" id="start-date" placeholder="yyyy-mm-dd" [(ngModel)]="editTraining.date">
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="traineename">Training Topic</label>
+                    <input type="text" class="form-control" id="traineename" name="traineename" [(ngModel)]="editTraining.trainingTopic">
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="traineename">Total hours coverded</label>
+                    <input type="text" class="form-control" id="traineename" name="traineename" [(ngModel)]="editTraining.totalHoursCovered">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary"  (click)="editTrainingHistory()" data-dismiss="modal">Update</button>&nbsp;&nbsp;
+              <button type="button" class="btn btn-danger" data-toggle="modal" data-dismiss="modal" data-target="#cancelpromotion">Cancel</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- delete modal start -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+       
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Do you want to delete it?
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" >cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="deleteTrainingHistoryById()">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>

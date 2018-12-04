@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tab" role="tabpanel">
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" routerLinkActive="active">
+              <a class="active" routerLink="planVecancies" aria-controls="home" role="tab" data-toggle="tab">Plan Vecancies</a>
+            </li>
+            <li role="presentation" routerLinkActive="active">
+                    <a class="active" routerLink="JobVecanciesTemplate" aria-controls="home" role="tab" data-toggle="tab">Job Vecancies Template</a>
+                  </li>
+                  <li role="presentation" routerLinkActive="active">
+                        <a class="active" routerLink="recordOfApplicantCv" aria-controls="home" role="tab" data-toggle="tab">Record of Applicant Cv</a>
+                      </li>
+                      <li role="presentation" routerLinkActive="active">
+                            <a class="active" routerLink="admin" aria-controls="home" role="tab" data-toggle="tab">Admin</a>
+                          </li>
+          </ul>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>

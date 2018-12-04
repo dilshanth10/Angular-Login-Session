@@ -1,0 +1,27 @@
+
+      <!-- card body start -->
+      <div class="card-body"><div class="mat-elevation-z8">
+        <table class="table table-bordered">
+           <thead>
+             <tr>
+               <th>Period Year <br>(from)</th>
+               <th>Period Year <br>(To)</th>
+               <th>Name Of School</th>
+              <th>Result</th>
+              <th>Year Of Exam</th>
+              <th>Exam Type</th>
+             </tr>
+             <tr *ngFor="let aca of academicQualifications">
+                <td>{{aca.periodYearFrom}}</td>
+                <td>{{aca.periodYearTo}}</td>
+                <td>{{aca.schoolName}}</td>
+                <td>{{aca.result}}</td>
+                <td>{{aca.examinationYear}}</td>
+                <td>{{aca.examType.examTypeName}}</td>
+             </tr>
+           </thead>
+         </table>
+        </div>
+     </div>
+      <!-- card body end -->
+ 

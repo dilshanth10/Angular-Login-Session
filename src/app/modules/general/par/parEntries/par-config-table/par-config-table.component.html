@@ -1,0 +1,42 @@
+<div class="card">
+  
+
+<div class="card-body">
+  <!-- {{formParConfig.value | json}} -->
+<form class="form-inline" [formGroup]="formParConfig">
+  <div class="form-group">
+    <label for="configId">Config Id:</label>
+    <input type="text" formControlName="parConfigId" name="parConfigId" class="form-control" id="configId">
+  </div>
+  <div class="form-group">
+    <label for="configName">Config Name:</label>
+    <input type="text" formControlName="parConfigName" name="parConfigName" class="form-control" id="configName">
+  </div>
+ 
+  <button type="submit" class="btn btn-default"(click)="addData()">Add</button>
+</form>
+</div>
+</div>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Config Id</th>
+      <th>Config Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let parConfig of parConfigArray">
+      <td>{{parConfig.id}}</td>
+      <td>{{parConfig.contentName}}</td>
+      <td>
+        <button class="btn btn-primary">Edit</button> 
+        &nbsp;
+         <button class="btn btn-warning">Delete</button>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>

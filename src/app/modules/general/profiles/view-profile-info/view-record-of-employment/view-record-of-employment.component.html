@@ -1,0 +1,98 @@
+
+
+ 
+
+      <!-- card body start -->
+      <div class="card-body">
+        <!-- <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field> -->
+
+        <div class="mat-elevation-z8">
+          
+
+           
+
+            <!-- column 2 start -->
+            <!-- <ng-container matColumnDef="role">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Month&Year <br>  (from - to) </mat-header-cell>
+              <mat-cell *matCellDef="let role"> {{role.roleName}}</mat-cell>
+            </ng-container> -->
+            <!-- column 2 end -->
+
+            <!-- column 3 start -->
+            <!-- <ng-container matColumnDef="status">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Period </mat-header-cell>
+              <mat-cell *matCellDef="let role"> {{role.status}}</mat-cell>
+            </ng-container> -->
+            <!-- column 3 end -->
+
+             <!-- column 4 start -->
+             <!-- <ng-container matColumnDef="period">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Name & Address <br>of Place of work </mat-header-cell>
+              <mat-cell *matCellDef="let role"> {{role.period}} </mat-cell>
+            </ng-container> -->
+            <!-- column 4 end -->
+
+             <!-- column 5 start -->
+             <!-- <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Designation & <br> Type of Work </mat-header-cell>
+              <mat-cell *matCellDef="let role"> {{role.name}}</mat-cell>
+            </ng-container> -->
+            <!-- column 5 end -->
+
+             <!-- column 6 start -->
+             <!-- <ng-container matColumnDef="leave">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Reasons for <br>leaving</mat-header-cell>
+              <mat-cell *matCellDef="let role"> {{role.leave}}</mat-cell>
+            </ng-container> -->
+            <!-- column 6 end -->
+
+             <!-- column 7 start -->
+             <!-- <ng-container matColumnDef="salary">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Leaving/Present <br>salary </mat-header-cell>
+              <mat-cell *matCellDef="let role"> {{role.salary}}</mat-cell>
+            </ng-container> -->
+            <!-- column 7 end -->
+
+
+            <table class="table table-bordered">
+             
+              <thead>
+                  <tr>
+                      <th>Work Name </th>
+                      <th>Period Year <br>
+                        (From)</th>
+                      <th>Period Year <br>
+                        (To)</th>
+                      <th>Reasons for <br>leaving<br>
+                                   course</th>
+                      <th>Leaving/Present <br>salary <br> passed</th>
+                      
+
+                  </tr>
+              </thead> 
+              <tbody>
+                  <tr *ngFor="let recodOfEmps of recodOfEmp">
+                      <td>{{recodOfEmps.workName}}</td>
+                      <td>{{recodOfEmps.periodYearFrom}}</td>
+                      <td>{{recodOfEmps.periodYearTo}}</td>
+                      <td>{{recodOfEmps.reasonForLeaving}}</td>
+                      <td>{{recodOfEmps.leavingSalary}}</td>
+                  </tr>
+              </tbody>
+          </table>
+
+
+<!-- 
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+           -->
+
+          <!-- pagination start -->
+          <mat-paginator [pageSizeOptions]="[3, 5, 10, 25]"></mat-paginator>
+          <!-- pagination end -->
+        </div>
+      </div>
+      <!-- card body end -->
+   

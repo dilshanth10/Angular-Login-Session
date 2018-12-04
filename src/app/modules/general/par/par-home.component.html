@@ -1,0 +1,29 @@
+<h5>HR views</h5>
+<ul class="nav nav-pills">
+
+
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" routerLink="parconfiguration">Par Configurations</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" routerLink="schedulepar">Schedule Par</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLinkActive="active" routerLink="paroutcomes">Par Out Comes</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+<div style="height:600px;">
+  <h5>Employee /Trainee views par</h5>
+  <app-par-template></app-par-template>
+
+  <app-par-history></app-par-history>
+  <app-track-par></app-track-par>
+</div>

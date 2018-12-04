@@ -1,0 +1,93 @@
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title">Add Training History</h5>
+    <div class="card-tools">
+      <button type="button" class="btn btn-tool" data-widget="collapse">
+        <i class="fa fa-minus"></i>
+      </button>
+
+    </div>
+  </div>
+  <div class="card-body nopadding">
+    <form role="form">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12">
+            <fieldset>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Trainer Id</label>
+                    <input required type="text" class="form-control" id="trainernumber" placeholder="Trainer number"
+                      [(ngModel)]="newHistory.trainingId">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Name</label>
+                    <input required type="text" class="form-control" id="trainername" placeholder="Trainer Name"
+                      [(ngModel)]="newHistory.trainerName">
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="start-date"> Date</label>
+                    <input required type="date" class="form-control" id="start-date" placeholder="yyyy-mm-dd"
+                      [(ngModel)]="newHistory.date">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="school-subject">Training Topic</label>
+                    <input required type="text" class="form-control" id="matricesmeasured" placeholder="Training Topic"
+                      [(ngModel)]="newHistory.trainingTopic">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="school-year-graduation">Total hours covered</label>
+                    <input required type="text" class="form-control" id="relevantscromatrics" placeholder="Total hours covered"
+                      [(ngModel)]="newHistory.totalHoursCovered">
+                  </div>
+                </div>
+
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <div class="card-footer">
+    <button type="button" class="btn btn-primary" (click)="addTrainingHistory()">Add</button> &nbsp;
+
+
+    <!-- <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal">Delete</button> -->
+  </div>
+</div>
+
+
+<!-- add modal start -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Do you want to add this?
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>

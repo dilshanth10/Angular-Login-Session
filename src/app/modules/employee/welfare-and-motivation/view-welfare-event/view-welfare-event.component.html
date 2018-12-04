@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+
+      <!-- card header start -->
+      <div class="card-header">
+        <h5 class="card-title">View welfare event</h5>
+        <div class="card-tools">
+          <button type="button" class="btn btn-tool" data-widget="collapse">
+            <i class="fa fa-minus"></i>
+          </button>
+          <button type="button" class="btn btn-tool" data-widget="remove">
+            <i class="fa fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <!-- card header end -->
+
+      <!-- card body start -->
+      <div class="card-body">
+        <div class="col">
+          <div class="float-right">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addwelfareevent">
+              Add
+            </button>
+          </div>
+        </div>
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+
+        </mat-form-field>
+
+
+        <div class="mat-elevation-z8">
+          <mat-table [dataSource]="dataSource" matSort>
+
+            <!-- column 1 start -->
+            <ng-container matColumnDef="nameofevent">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Welfare Name</mat-header-cell>
+              <mat-cell *matCellDef="let viewwelfare"> {{viewwelfare.welfareName}} </mat-cell>
+            </ng-container>
+            <!-- column 1 end -->
+
+            <!-- column 2 start -->
+            <ng-container matColumnDef="budjet">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Budget for the event </mat-header-cell>
+              <mat-cell *matCellDef="let viewwelfare"> {{viewwelfare.welfareBudget}}</mat-cell>
+            </ng-container>
+            <!-- column 2 end -->
+
+            <!-- column 3 start -->
+            <ng-container matColumnDef="status">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Approval Status </mat-header-cell>
+              <mat-cell *matCellDef="let viewwelfare"> {{viewwelfare.status}}</mat-cell>
+            </ng-container>
+            <!-- column 3 end -->
+
+            <!-- column 4 start -->
+            <ng-container matColumnDef="dateofevent">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Date of the event </mat-header-cell>
+              <mat-cell *matCellDef="let viewwelfare"> {{viewwelfare.promoteDate}}</mat-cell>
+            </ng-container>
+            <!-- column 4 end -->
+
+            <!-- column 5 start -->
+            <ng-container matColumnDef="delete">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Edit/Delete </mat-header-cell>
+              <mat-cell *matCellDef="let viewwelfare">
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#Editwelfareevent">
+                  Edit
+                </button> &nbsp;&nbsp;
+                <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#Deletewelfareevent">
+                  Delete
+                </button>
+              </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+
+          <!-- pagination start -->
+          <mat-paginator [pageSizeOptions]="[3, 5, 10, 25]" showFirstLastButtons></mat-paginator>
+          <!-- pagination end -->
+        </div>
+      </div>
+      <!-- card body end -->
+
+    </div>
+  </div>
+</div>

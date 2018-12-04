@@ -1,0 +1,97 @@
+<section class="contetnt">
+    <div class="row">
+      <div class="col-md-12">
+    
+        <!-- 1st Form Start -->
+        <div class="card">
+    
+          <!-- card header start -->
+          <div class="card-header">
+            <h5 class="card-title">View Employee's Career Development Plan</h5>
+    
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-widget="collapse">
+                <i class="fa fa-minus"></i>
+              </button>
+              <button type="button" class="btn btn-tool" data-widget="remove">
+                <i class="fa fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <!-- card-header end -->
+    
+          <!-- card body start -->
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card card-primary">
+    
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="card">
+                        <!-- card header start -->
+                        <div class="card-header">
+                          <h5 class="card-title"></h5>
+                        </div>
+                        <!-- card header end -->
+                  
+                        <!-- card body start -->
+                        <div class="card-body">
+                  
+                          <mat-form-field>
+                            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                          </mat-form-field>
+                  
+                          <div class="mat-elevation-z8">
+                            <mat-table [dataSource]="dataSource" matSort>
+                
+                              <ng-container matColumnDef="employeeName">
+                                <mat-header-cell *matHeaderCellDef mat-sort-header> Employee Name </mat-header-cell>
+                                <mat-cell *matCellDef="let history"> {{history.user.fullName}}</mat-cell>
+                              </ng-container>
+                  
+                              <ng-container matColumnDef="position">
+                                <mat-header-cell *matHeaderCellDef mat-sort-header>Position</mat-header-cell>
+                                <mat-cell *matCellDef="let history"> {{history.createdAt}}</mat-cell>
+                              </ng-container>
+                  
+                              <ng-container matColumnDef="PARDate">
+                                <mat-header-cell *matHeaderCellDef mat-sort-header> PAR Date </mat-header-cell>
+                                <mat-cell *matCellDef="let history"> {{history.selfServiceType.selfServiceTypeName}}</mat-cell>
+                              </ng-container>
+                  
+                              <ng-container matColumnDef="PARScore">
+                                <mat-header-cell *matHeaderCellDef mat-sort-header> PAR Score</mat-header-cell>
+                                <mat-cell *matCellDef="let history"> {{history.status}}</mat-cell>
+                              </ng-container>
+
+                              <ng-container matColumnDef="plans">
+                                <mat-header-cell *matHeaderCellDef mat-sort-header> PAR Score</mat-header-cell>
+                                <mat-cell *matCellDef="let history"> {{history.status}}</mat-cell>
+                              </ng-container>
+                  
+                              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+                            </mat-table>
+                  
+                            <!-- pagination start -->
+                            <mat-paginator [pageSizeOptions]="[3, 5, 10, 25]"></mat-paginator>
+                            <!-- pagination end -->
+                          </div>
+                  
+                        </div>
+                        <!-- card body end -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- card body end -->
+        </div>
+      </div>
+    </div>
+    </section>
+
+   

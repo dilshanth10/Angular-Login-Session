@@ -1,0 +1,61 @@
+ <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+  <mat-tab label="Loan">
+    <mat-tab-group>
+      <mat-tab label="View Loan">
+        <app-view-loan></app-view-loan>
+      </mat-tab>
+
+      <mat-tab label="Loan Details">
+        <app-taken-view-by-emp></app-taken-view-by-emp>
+      </mat-tab>
+
+      <mat-tab label="Loan Details Of Employees">
+        <app-taken-view-by-hr></app-taken-view-by-hr>
+      </mat-tab>
+
+      <!-- <mat-tab label="Eligible Loan Details">
+        <app-eligible-loan></app-eligible-loan>
+      </mat-tab> -->
+    </mat-tab-group>
+  </mat-tab>
+
+
+  <mat-tab label="Salary">
+
+    <mat-tab-group>
+      <mat-tab label="Salary Chart HR View">
+        <app-view-salary-chart></app-view-salary-chart>
+      </mat-tab>
+      <mat-tab label="Salary Chart Employee View">
+        <app-salary-chart-employee></app-salary-chart-employee>
+      </mat-tab>
+    </mat-tab-group>
+
+  </mat-tab>
+
+  <mat-tab label="Allowance Details">
+
+    <mat-tab-group>
+      <mat-tab label="View Allowance">
+        <app-view-allowances></app-view-allowances>
+      </mat-tab>
+    </mat-tab-group>
+
+  </mat-tab>
+  
+  <mat-tab label="Salary Details">
+
+    <mat-tab-group>
+      <mat-tab label="View Salary Details">
+        <app-hr-salary-view></app-hr-salary-view>
+      </mat-tab>
+    </mat-tab-group>
+
+  </mat-tab>
+
+
+
+</mat-tab-group>
+
+<router-outlet></router-outlet> 
+

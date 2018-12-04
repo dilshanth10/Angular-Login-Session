@@ -1,0 +1,71 @@
+<div class="card mt-3">
+  <!-- Termination request card header start -->
+  <div class="card-header">
+    <h5 class="card-title">
+      Add Event
+    </h5>
+    <div class="card-tools">
+      <button type="button" class="btn btn-tool" data-widget="collapse">
+        <i class="fa fa-minus"></i>
+      </button>
+      <button type="button" class="btn btn-tool" data-widget="remove">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+  </div>
+  <!-- Termination request card-header end -->
+  <div class="container-fluid">
+    <!-- card body start -->
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Termination request form start -->
+          <form role="form">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="title">Event Title</label>
+                <input type="text" class="form-control" name="title" id="title" placeholder="Title">
+              </div>
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label for="startAt">Starts At</label>
+                  <input type="text" mwlFlatpickr class="form-control" name="startAt" id="startAt" placeholder="yyyy/mm/dd">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="primaryColor">Primary Color</label>
+                  <input type="color" class="form-control" name="primaryColor" id="primaryColor">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <label for="endAt">Ends At</label>
+                  <input type="text" mwlFlatpickr class="form-control" name="endAt" id="endAt" placeholder="yyyy/mm/dd">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="secondaryColor">Secondary Color</label>
+                  <input type="color" class="form-control" name="secondaryColor" id="secondaryColor">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- card body end -->
+  <div class="card-footer">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">Submit</button>
+    &nbsp;
+  </div>
+</div>
+<!--card end-->

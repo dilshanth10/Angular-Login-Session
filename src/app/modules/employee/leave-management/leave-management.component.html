@@ -1,0 +1,58 @@
+<!-- <app-carry-forward-leave-request></app-carry-forward-leave-request> -->
+<!-- <app-carry-forward-leave></app-carry-forward-leave> -->
+<!-- <app-allocate-leave></app-allocate-leave> -->
+<!-- <app-apply-leave></app-apply-leave>
+<app-approve-leave></app-approve-leave> -->
+<!-- <app-leave-calendar></app-leave-calendar> -->
+<!-- <app-leave-history></app-leave-history> -->
+<!-- <app-post-event></app-post-event> -->
+<!-- <app-view-specific-emp-leave></app-view-specific-emp-leave> -->
+
+<div id="hr-leave-tab-group">
+  <mat-tab-group>
+
+    <!-- <mat-tab label="Carry forward Leave Request">
+      <app-carry-forward-leave-request></app-carry-forward-leave-request>
+    </mat-tab> -->
+
+    <!-- <mat-tab label="Carry forward Leave">
+      <app-carry-forward-leave></app-carry-forward-leave>
+    </mat-tab> -->
+
+    <!-- <mat-tab label="Allocate Leave">
+      <app-allocate-leave></app-allocate-leave>
+    </mat-tab> -->
+
+    <mat-tab label="Leave Request">
+      <app-approve-leave></app-approve-leave>
+      <app-view-specific-emp-leave></app-view-specific-emp-leave>
+      <app-approve-cancel-leave></app-approve-cancel-leave>
+    </mat-tab>
+
+    <mat-tab label="Leave History">
+        <app-leave-history></app-leave-history>
+      </mat-tab>
+
+    <mat-tab label="Request Leave">
+      <app-apply-leave></app-apply-leave>
+      
+    </mat-tab>
+    <mat-tab label="Leave Calender">
+      <div class="row">
+        <div class="col-md-7">
+          <app-leave-calendar></app-leave-calendar>
+        </div>
+        <div class="col-md-5">
+          <app-post-event></app-post-event>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+<app-leave-accept-modal></app-leave-accept-modal>
+<app-leave-reject-modal></app-leave-reject-modal>
+<app-cancel-leave-accept></app-cancel-leave-accept>
+<app-cancel-leave-reject></app-cancel-leave-reject>
+<app-view-leave-details></app-view-leave-details>
+<app-view-leave-details></app-view-leave-details>

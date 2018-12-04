@@ -1,0 +1,111 @@
+<!-- add modal start -->
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+
+      <!-- card header start -->
+      <div class="card-header">
+        <h5 class="card-title">Promotion History</h5>
+      </div>
+
+      <!-- form start -->
+      <div class="card-body">
+
+        <!-- <div class="row">
+              <div class="col-md-2">
+                <select class="form-control">
+                  <option>Employee ID</option>
+                  <option>Employee Name</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                  <input type="text" class="form-control" id="emp" name="emp" placeholder="Enter Selection">
+              </div>
+              <div class="col-md-4">
+                <i class="material-icons pointer">search</i>
+              </div>
+            </div>
+
+        <br>
+        <br> -->
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+        <div class="mat-elevation-z8">
+          <mat-table [dataSource]="dataSource">
+            <!-- column 1 start -->
+            <ng-container matColumnDef="proId">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Promotion ID</mat-header-cell>
+              <mat-cell *matCellDef="let AddPromotion"> {{AddPromotion.id}} </mat-cell>
+            </ng-container>
+            <!-- column 1 end -->
+
+            <!-- column 1 start -->
+            <ng-container matColumnDef="Employee">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Employee Name</mat-header-cell>
+              <mat-cell *matCellDef="let AddPromotion"> {{AddPromotion.requestId}} </mat-cell>
+            </ng-container>
+            <!-- column 1 end -->
+
+            <!-- column 4 start -->
+            <ng-container matColumnDef="position">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Position</mat-header-cell>
+              <mat-cell *matCellDef="let AddPromotion"> {{AddPromotion.position}} </mat-cell>
+            </ng-container>
+            <!-- column 4 end -->
+
+            <!-- column 5 start -->
+            <ng-container matColumnDef="promdate">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Promoted Date</mat-header-cell>
+              <mat-cell *matCellDef="let AddPromotion"> {{AddPromotion.promotedDate}} </mat-cell>
+            </ng-container>
+            <!-- column 5 end -->
+
+            <!-- column 6 start -->
+            <ng-container matColumnDef="promremark">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Remark</mat-header-cell>
+              <mat-cell *matCellDef="let AddPromotion"> {{AddPromotion.remark}} </mat-cell>
+            </ng-container>
+            <!-- column 6 end -->
+
+            <!-- column 7 start -->
+            <ng-container matColumnDef="promsalary">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Salary</mat-header-cell>
+              <mat-cell *matCellDef="let AddPromotion"> {{AddPromotion.salary}} </mat-cell>
+            </ng-container>
+            <!-- column 7 end -->
+
+             <!-- column 7 start -->
+             <ng-container matColumnDef="promotedBy">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Pormoted BY</mat-header-cell>
+              <mat-cell *matCellDef="let AddPromotion"> {{AddPromotion.promotedBy}} </mat-cell>
+            </ng-container>
+            <!-- column 7 end -->
+
+            <!-- column 8 start -->
+            <ng-container matColumnDef="edit/delete">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Edit/Delete </mat-header-cell>
+              <mat-cell *matCellDef="let AddPromotion">
+                <!-- <a href="#" ><span class="material-icons">edit</span></a> &nbsp;&nbsp;&nbsp;
+                  <a href="#" ><span class="material-icons">delete</span></a> -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editPromotion">Edit</button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletePromotion">Delete</button>&nbsp;&nbsp;
+              </mat-cell>
+            </ng-container>
+            <!-- column 8 end -->
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+
+        </div>
+      </div>
+      <!-- form end -->
+    </div>
+  </div>
+</div>
+<!-- modal content end -->
+
+<!-- add modal end -->
+
+<app-edit-promotion-history></app-edit-promotion-history>

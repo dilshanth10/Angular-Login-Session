@@ -1,0 +1,59 @@
+<section class="content">
+  <!-- tab content start -->
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="tab1_content" aria-labelledby="tab1_content">
+      <!-- <app-request-leave></app-request-leave> -->
+
+      <!-- appoinment start -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+
+            <!-- card header start -->
+            <div class="card-header">
+              <h5 class="card-title">View Record Of Applicant CVs</h5>
+              <div class="card-tools">
+
+              </div>
+            </div>
+            <!-- card header end -->
+
+            <div class="form-group">
+              <table class="table">
+                <tr>
+                  <th>Full Name</th>
+                  <th>Email Address</th>
+                  <th>NIC No</th>
+                  <th>Address</th>
+                  <th>Date of Birth</th>
+                  <th>Qualification</th>
+                  <th>Applied Post</th>
+
+
+                </tr>
+                <tr *ngFor="let applicant of recordOfApplicantAdd">
+                  <td>{{applicant.fullName}}</td>
+                  <td>{{applicant.email}}</td>
+                  <td>{{applicant.nic}}</td>
+                  <td>{{applicant.address}}</td>
+                  <td>{{applicant.dateOfBirth}}</td>
+                  <td>{{applicant.highestQualificationId.}}</td>
+                  <td>{{applicant.address}}</td>
+     
+                  <td>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit-modal">edit
+                    </button>
+                  </td>
+                  <td> <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-modal">Delete</button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <!-- card body end -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- tab content end -->
+</section>

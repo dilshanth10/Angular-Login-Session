@@ -1,0 +1,93 @@
+<!-- add modal start -->
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+
+      <!-- card header start -->
+      <div class="card-header">
+        <h5 class="card-title">Promotion Denied History</h5>
+      </div>
+      <div class="card-body">
+
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
+        <div class="mat-elevation-z8">
+          <mat-table [dataSource]="dataSource">
+
+            <!-- column 1 start -->
+            <ng-container matColumnDef="deniedID">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Denied ID</mat-header-cell>
+              <mat-cell *matCellDef="let AddDeniedPromotion"> {{AddDeniedPromotion.id}} </mat-cell>
+            </ng-container>
+            <!-- column 1 end -->
+
+             <!-- column 1 start -->
+             <ng-container matColumnDef="empname">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Employee Name</mat-header-cell>
+              <mat-cell *matCellDef="let AddDeniedPromotion"> {{AddDeniedPromotion.designationId}} </mat-cell>
+            </ng-container>
+            <!-- column 1 end -->
+
+            <!-- column 2 start -->
+            <!-- <ng-container matColumnDef="reqID">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Request ID</mat-header-cell>
+              <mat-cell *matCellDef="let AddDeniedPromotion"> {{AddDeniedPromotion.requsetId}} </mat-cell>
+            </ng-container> -->
+            <!-- column 2 end -->
+
+            <!-- column 4 start -->
+            <ng-container matColumnDef="position">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Position</mat-header-cell>
+              <mat-cell *matCellDef="let AddDeniedPromotion"> {{AddDeniedPromotion.position}} </mat-cell>
+            </ng-container>
+            <!-- column 4 end -->
+
+            <!-- column 5 start -->
+            <ng-container matColumnDef="denieddate">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Denied Date</mat-header-cell>
+              <mat-cell *matCellDef="let AddDeniedPromotion"> {{AddDeniedPromotion.deniedDate}} </mat-cell>
+            </ng-container>
+            <!-- column 5 end -->
+
+            <!-- column 6 start -->
+            <ng-container matColumnDef="deniedremark">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Denied Remark</mat-header-cell>
+              <mat-cell *matCellDef="let AddDeniedPromotion"> {{AddDeniedPromotion.deniedRemark}} </mat-cell>
+            </ng-container>
+            <!-- column 6 end -->
+
+             <!-- column 6 start -->
+             <ng-container matColumnDef="deniedBy">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>Denied By</mat-header-cell>
+              <mat-cell *matCellDef="let AddDeniedPromotion"> {{AddDeniedPromotion.deniedBy}} </mat-cell>
+            </ng-container>
+            <!-- column 6 end -->
+
+            <!-- column 5 start -->
+            <ng-container matColumnDef="edit/delete">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Edit/Delete </mat-header-cell>
+              <mat-cell *matCellDef="let denhist">
+                <!-- <a href="#" ><span class="material-icons">edit</span></a> &nbsp;&nbsp;&nbsp;
+                    <a href="#" ><span class="material-icons">delete</span></a> -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editdenied"   >Edit</button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#" (click)="deleteUserById(addDeniedPromotion)">Delete</button>&nbsp;&nbsp;
+
+              </mat-cell>
+            </ng-container>
+            <!-- column 5 end -->
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal content end -->
+
+<!-- add modal end -->
+
+<app-edit-promotion-denied-history></app-edit-promotion-denied-history>

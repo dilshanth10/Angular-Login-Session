@@ -1,0 +1,84 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>par Id</th>
+      <th>Emp Id</th>
+      <th>Par Sheduled Date</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let par of parArray">
+      <td>{{par.id}}</td>
+      <td>{{par.empId}}</td>
+      <td>{{par.scheduleDate | date}}</td>
+      <td></td>
+      <td>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"  (click)="viewSchedulePar(par.id)">
+              view
+            </button>
+            &nbsp;
+            <button type="button" class="btn btn-success" data-toggle="modal">Discussion</button>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+          <div class="row">
+              <div class="col-md-6">
+              <h3>Appraisors List</h3>
+              <ul>
+                <li *ngFor="let parAppraisor of  parDataArray.scheduleParAppraisorsList">{{parAppraisor.appraisorId}}</li>
+              </ul>
+            </div>
+    
+            <div class="col-md-6">
+                <h3>Par Contents</h3>
+                <ul>
+                  <li *ngFor="let parContent of  parDataArray.scheduleParContentList">{{parContent.parContentId}}</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                  <div class="card-body">
+                    
+                        <div class="col-md-12">
+                            <ol class="progtrckr" data-progtrckr-steps="3">
+                                <li class="progtrckr-done">Trainee</li>
+                             <li class="progtrckr-done">Lead</li>
+                             <li class="progtrckr-todo">HR Manager</li>
+                             <!-- <li class="progtrckr-todo">Shipped</li>
+                             <li class="progtrckr-todo">Delivered</li> -->
+                            </ol>
+                        </div>
+                  </div>
+              </div>
+            </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>

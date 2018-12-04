@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Config Id</th>
+      <th>Config Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let parConfig of parConfigArray;let i=index">
+      <td>{{parConfig.id}}</td>
+      <td>{{parConfig.contentName}}<input type="number"  /></td>
+      <td>
+        <button class="btn btn-primary">Edit</button> 
+        &nbsp;
+         <button class="btn btn-warning">Delete</button>
+      </td>
+    </tr>
+    
+  </tbody>
+</table>

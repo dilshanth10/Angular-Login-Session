@@ -1,0 +1,65 @@
+<!-- card body start -->
+<div class="card-body">
+  <!-- <div class="row">
+     <div class="col-md-3">
+            <mat-form-field>
+              <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+            </mat-form-field>
+          </div> --
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="department">Department</label>
+        <input list="employeeList" class="form-control" name="employeeName" id="employeeName" placeholder="Select Department"
+          autocomplete="on">
+        <datalist id="employeeList">
+          <option value="Raamu"></option>
+          <option value="Soomu"></option>
+          <option value="Keemu"></option>
+          <option value="Seemu"></option>
+          <option value="Heemu"></option>
+        </datalist>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="empname">Employee Name</label>
+        <input type="text" class="form-control" id="empname" placeholder="EmployeeName" readonly>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="form-group">
+        <label for="empid">Employee ID</label>
+        <input type="text" class="form-control" id="empid" placeholder="Employee Id" readonly>
+      </div>
+    </div>
+  </div> -->
+  <div class="mat-elevation-z8">
+    <table class="table ">
+      <thead >
+        <tr>
+          <th>Job Title</th>
+          
+          <th>Responsibility</th>
+          <th>Location</th>
+          <th>Key Activity</th>
+          <th>Over All Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rol of roles">
+          <td>{{rol.job.jobName}}</td>
+        
+          <td>{{rol.responsibility}}</td>
+          <td>{{rol.location.locationName}}</td>
+          <td>{{rol.keyActivity.name}}</td>
+          <td>{{rol.overAllPurpose}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- pagination start -->
+    <mat-paginator [pageSizeOptions]="[3, 5, 10, 25]"></mat-paginator>
+    <!-- pagination end -->
+  </div>
+</div>
+<!-- card body end -->

@@ -1,0 +1,137 @@
+<div class="card">
+  <!-- card header start -->
+  <div class="card-header">
+    <h5 class="card-title">Manager</h5>
+  </div>
+  <!-- card-header end -->
+  <!-- card body start -->
+  <div class="card-body nopadding">
+    <div class="card-body">
+      <div class="row">
+        <form #addRequestPro="ngForm">
+          <!-- {{addRequestPromotionObj | json}}
+        <pre>
+          {{addRequestPro.value | json}}
+        </pre> -->
+
+          <div class="row">
+            <div class="col-md-3">
+              <select class="form-control" name="departmentname" [(ngModel)]="addRequestPromotionObj.departmentName">
+                <option disabled>Select Department</option>
+                <option *ngFor="let department of departments" value="{{department.id}}">{{department.departmentName}}</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <i class="material-icons pointer">search</i>
+            </div>
+          </div>
+          <br>
+          <div class="col-md-12">
+            <!-- card body start -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="usrid">User Name</label>
+                  <select class="form-control" name="userId" [(ngModel)]="addRequestPromotionObj.userId">
+                    <option selected disabled value="0">Select User Name</option>
+                    <option *ngFor="let user of users" data-value="{{user.id}}">{{user.fullName}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="desigId">Position</label>
+                  <select class="form-control" name="designationId" [(ngModel)]="addRequestPromotionObj.designationId">
+                    <option selected disabled value="0">Select Position</option>
+                    <option *ngFor="let design of designations" data-value="{{design.id}}">{{design.designationName}}</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="recomby">Recommended By</label>
+                  <select class="form-control" name="recommendedBy" [(ngModel)]="addRequestPromotionObj.recommendedBy">
+                    <option selected disabled value="0">Select Name</option>
+                    <option *ngFor="let user of users" data-value="{{user.id}}">{{user.fullName}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="proremark">Promotion Remark</label>
+                  <textarea class="form-control" name="promotionRemark" id="proremark" [(ngModel)]="addRequestPromotionObj.promotionRemark"
+                    placeholder="promotion remark"></textarea>
+                </div>
+              </div>
+            </div>
+            <!-- card body end -->
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- card body end -->
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary" (click)="addRequestPromotion()">Request</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- User View -->
+
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title">Employee</h5>
+  </div>
+  <div class="card-body nopadding">
+    <div class="card-body">
+      <div class="row">
+        <form #addRequestPro="ngForm">
+          <!-- {{addRequestPromotionObj | json}}
+          <pre>
+            {{addRequestPro.value | json}}
+          </pre> -->
+
+          <div class="card-body">
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="userId">Employee Name</label>
+                  <input type="text" class="form-control" id="userId" name="userId" [(ngModel)]="addRequestPromotionObj.userId">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="designationId">Position</label>
+                  <select class="form-control" name="designationId" [(ngModel)]="addRequestPromotionObj.designationId">
+                    <option selected disabled value="0">Select Position</option>
+                    <option *ngFor="let design of designations" data-value="{{design.id}}">{{design.designationName}}</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="promotionRemark">Promotion Remark</label>
+                  <textarea class="form-control" id="promotionRemark" name="promotionRemark" [(ngModel)]="addRequestPromotionObj.promotionRemark"></textarea>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="recommendedBy">Recommended By</label>
+                  <input type="text" class="form-control" id="recommendedBy" name="recommendedBy" [(ngModel)]="addRequestPromotionObj.recommendedBy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="card-footer">
+      <button type="button" class="btn btn-primary" (click)="addRequestPromotion()">Request</button>
+    </div>
+  </div>
+</div>
